@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # User Authentication
 gem 'devise'
 gem 'omniauth-twitter'
+gem 'devise-i18n'
 
 # for enviroment var setting
 gem 'dotenv-rails'

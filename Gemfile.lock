@@ -73,6 +73,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.9.1)
+      devise (>= 4.7.1)
     dotenv (2.7.5)
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
@@ -232,6 +234,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   devise
+  devise-i18n
   dotenv-rails
   jbuilder (~> 2.7)
   letter_opener
