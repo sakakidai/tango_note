@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @word_book.title %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @word_book.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_word_book_path(@word_book) %> |
+<%= link_to 'Back', word_books_path %>
