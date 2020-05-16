@@ -10,6 +10,7 @@ require("channels")
 
 require("foundation-sites")
 require("src/application")
+require("@fortawesome/fontawesome-free/js/all")
 
 $(document).on('turbolinks:load', function() {
   $(document).foundation()
