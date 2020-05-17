@@ -1,5 +1,6 @@
 class WordBooksController < ApplicationController
   before_action :set_word_book, only: [:show, :edit, :update, :destroy]
+  before_action :sign_in_required
 
   # GET /word_books
   # GET /word_books.json
@@ -24,8 +25,7 @@ class WordBooksController < ApplicationController
   # POST /word_books
   # POST /word_books.json
   def create
-    @word_book = WordBook.new(word_book_params)
-
+    @word_book = current_user.word_books.build(word_book_params)
     respond_to do |format|
       if @word_book.save
         format.html { redirect_to @word_book, notice: 'Word book was successfully created.' }

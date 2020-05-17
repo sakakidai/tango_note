@@ -11,6 +11,7 @@ require("channels")
 require("foundation-sites")
 require("src/application")
 require("@fortawesome/fontawesome-free/js/all")
+require("cocoon-js")
 
 $(document).on('turbolinks:load', function() {
   $(document).foundation()

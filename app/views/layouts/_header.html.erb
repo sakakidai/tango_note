@@ -9,8 +9,8 @@
     <ul class="dropdown menu" data-dropdown-menu>
       <li class="menu-text">tango note</li>
       <% if user_signed_in? %>
-        <li><a href="#">単語帳</a></li>
-        <li><a href="#">単語帳作成</a></li>
+        <li><%= link_to '単語帳', word_books_path %></li>
+        <li><%= link_to '単語帳の新規作成', new_word_book_path %></li>
         <li><a href="#">テスト</a></li>
       <% end %>
     </ul>
@@ -24,7 +24,7 @@
         </a>
         <ul class="menu vertical nested align-center">
           <% if user_signed_in? %>
-            <li><a href="#">単語帳</a></li>
+            <li><%= link_to '単語帳', new_word_book_path %></li>
             <li><a href="#">単語帳作成</a></li>
             <li><a href="#">テスト</a></li>
             <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
