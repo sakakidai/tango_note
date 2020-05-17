@@ -26,14 +26,11 @@ class WordBooksController < ApplicationController
   # POST /word_books.json
   def create
     @word_book = current_user.word_books.build(word_book_params)
-    respond_to do |format|
-      if @word_book.save
-        format.html { redirect_to @word_book, notice: 'Word book was successfully created.' }
-        format.json { render :show, status: :created, location: @word_book }
-      else
-        format.html { render :new }
-        format.json { render json: @word_book.errors, status: :unprocessable_entity }
-      end
+    if @word_book.save
+      redirect_to @word_book, notice: 'Word book was successfully created.'
+    else
+      flash.now[:alert] = 'エラーがあります'
+      render :new
     end
   end
 

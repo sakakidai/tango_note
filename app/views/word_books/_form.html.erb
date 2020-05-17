@@ -1,22 +1,10 @@
-<%= form_with(model: word_book, local: true) do |form| %>
-  <% if word_book.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(word_book.errors.count, "error") %> prohibited this word_book from being saved:</h2>
-
-      <ul>
-        <% word_book.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= form_with(model: word_book, local: true, builder: CustomFormBuilder) do |f| %>
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>
