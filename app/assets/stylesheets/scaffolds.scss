@@ -50,21 +50,6 @@ div {
   color: green;
 }
 
-.field_with_errors {
-  label {
-    color: red;
-  }
-  input {
-    border: solid 1px red;
-    background-color: #f7e4e1;
-    margin: 0;
-  }
-}
-
-.has-error {
-  color: red;
-}
-
 #error_explanation {
   width: 450px;
   border: 2px solid red;

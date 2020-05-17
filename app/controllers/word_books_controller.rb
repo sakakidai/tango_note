@@ -16,6 +16,7 @@ class WordBooksController < ApplicationController
   # GET /word_books/new
   def new
     @word_book = WordBook.new
+    @word_book.words.build
   end
 
   # GET /word_books/1/edit
@@ -66,6 +67,6 @@ class WordBooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def word_book_params
-      params.require(:word_book).permit(:title, :user_id)
+      params.require(:word_book).permit(:title, :user_id, words_attributes: [:id, :name, :translation, :_destroy])
     end
 end

@@ -1,3 +1,12 @@
 // Place all the styles related to the WordBooks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+input.under-bar-form {
+  height: 30px;
+  font-size: 16px;
+  border: none !important;
+  outline: 0;
+  border-bottom: 1px solid #d1d5db !important;
+  box-shadow: none !important;
+}

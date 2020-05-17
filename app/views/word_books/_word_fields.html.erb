@@ -1,0 +1,17 @@
+ <div class="card nested-fields">
+  <div class="card-section">
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'under-bar-form' %>
+    </div>
+    <div class="field">
+      <%= f.label :translation %>
+      <%= f.text_field :translation, class: 'under-bar-form' %>
+    </div>
+    <%= link_to_remove_association f, class: "button alert"  do %>
+      <%= t('word_books.button.remove_word') %>
+      <i class="fas fa-times-circle"></i>
+    <% end %>
+  </div>
+</div>
+ 
