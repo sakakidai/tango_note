@@ -1,5 +1,9 @@
-@import '~foundation-sites/dist/css/foundation';
+// @import '~foundation-sites/dist/css/foundation';
+@import "foundation/application";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
+// @import "scaffolds";
+@import "word_books";
+@import "error";
 
 // .top-bar {
 //   background: #333 !important;

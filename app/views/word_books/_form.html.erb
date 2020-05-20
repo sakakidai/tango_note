@@ -1,7 +1,7 @@
 <%= form_with(model: word_book, local: true, builder: CustomFormBuilder) do |f| %>
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title, class: 'under-bar-form' %>
+    <%= f.text_field :title, class: 'under-bar-form', placeholder: t('.title') %>
   </div>
 
   <div id='tasks'>
@@ -10,7 +10,7 @@
     <% end %>
     <div class='links'>
       <%= link_to_add_association f, :words, class: "button primary" do %>
-        <%= t('word_books.button.add_words') %>
+        <%= t('.button.add_words') %>
         <i class="fas fa-plus-circle"></i>
       <% end %>
     </div>
@@ -22,7 +22,7 @@
         <%= f.submit nil, class: "button primary expanded" %>
       </div>
       <div class="cell medium-6 small-12 medium-offset-3">
-        <%= link_to t('word_books.button.back'), word_books_path, class: "button secondary expanded" %>
+        <%= link_to t('.button.back'), word_books_path, class: "button secondary expanded" %>
       </div>
     </div>
   </div>

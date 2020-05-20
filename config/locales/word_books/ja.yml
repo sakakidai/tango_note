@@ -7,9 +7,15 @@ ja:
         name: 単語
         translation: 意味
   word_books:
-    button:
-      add_words: 単語を追加する
-      remove_word: 削除する
-      back: 戻る
-    new:
-      
+    form:
+      title: タイトル
+      button:
+        add_words: 単語を追加する
+        back: 戻る
+    word_fields:
+      button:
+        remove_word: 削除する
+      label:
+        name: 単語
+        translation: 意味
+

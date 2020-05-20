@@ -9,7 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 require("foundation-sites")
-require("src/application")
+require("stylesheets/application")
 require("@fortawesome/fontawesome-free/js/all")
 require("cocoon-js")
 

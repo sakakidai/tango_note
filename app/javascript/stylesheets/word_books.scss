@@ -9,4 +9,8 @@ input.under-bar-form {
   outline: 0;
   border-bottom: 1px solid #d1d5db !important;
   box-shadow: none !important;
+  &:focus {
+    border-bottom: 2px ridge #d1d5db !important;
+  }
 }
+
