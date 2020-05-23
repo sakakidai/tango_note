@@ -2,15 +2,6 @@
 @import "foundation/application";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 // @import "scaffolds";
+@import "shared";
 @import "word_books";
 @import "error";
-
-// .top-bar {
-//   background: #333 !important;
-// }
-//  .menu {
-//   background: #333 !important;
-// }
-.header-small-accordion {
-  float: right;
-}

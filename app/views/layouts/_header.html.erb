@@ -1,13 +1,7 @@
-<header>
-  <nav>
-    
-  </nav>
-</header>
-
 <div class="top-bar">
   <div class="top-bar-left show-for-medium">
     <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">tango note</li>
+      <li class="menu-text">Tango Note</li>
       <% if user_signed_in? %>
         <li><%= link_to '単語帳', word_books_path %></li>
         <li><%= link_to '単語帳の新規作成', new_word_book_path %></li>
@@ -15,11 +9,12 @@
       <% end %>
     </ul>
   </div>
+
   <div class="top-bar-right">
     <ul class="vertical menu hide-for-medium" data-accordion-menu>
       <li>
-        <a href="#">
-          <span class="menu-text">tango note</span>
+        <a href="#" class="accordion-heder">
+          <span class="menu-text">Tango Note</span>
           <span class="header-small-accordion"><i class="fas fa-bars text-right"></i></span>
         </a>
         <ul class="menu vertical nested align-center">
@@ -36,7 +31,8 @@
         </ul>
       </li>
     </ul>
-    <ul class="dropdown menu show-for-medium" data-dropdown-menu>
+
+    <ul class="dropdown menu show-for-medium" data-dropdown-menu data-disable-hover="true" data-click-open="true">
       <li>
         <a href="#">ユーザー設定</a>
         <ul class="menu vertical">

@@ -1,0 +1,22 @@
+.top-bar {
+  .menu-text {
+    color: $alert-color;
+    font-size: 1.5rem;
+    padding-top: 0.4rem;
+    padding-left: 0;
+  }
+  .header-small-accordion {
+    float: right;
+  }
+  .accordion-heder {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  a {
+    font-weight: bold;
+    &:hover {
+      color: $alert-color;
+      text-decoration: underline;
+    }
+  }
+}

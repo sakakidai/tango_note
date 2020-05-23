@@ -15,14 +15,7 @@
     <div class="grid-container">
       <div class="grid-x grid-margin-x">
         <div class="cell medium-8 small-12 medium-offset-2">
-          <% flash.each do |key, message| %>
-            <div class="callout <%= foundation_flash(key) %>" data-closable>
-              <%= message %>
-              <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-          <% end %>
+          <%= render 'layouts/flash' %>
           <%= yield %>
         </div>
       </div>

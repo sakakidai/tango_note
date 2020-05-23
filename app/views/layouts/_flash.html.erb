@@ -1,0 +1,9 @@
+<% flash.each do |key, message| %>
+  <% next if key == 'timedout' %>
+  <div class="callout <%= foundation_flash(key) %>" data-closable>
+    <%= message %>
+    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% end %>
