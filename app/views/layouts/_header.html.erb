@@ -1,11 +1,10 @@
 <div class="top-bar">
   <div class="top-bar-left show-for-medium">
     <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Tango Note</li>
+      <%= tag.li Settings.web.name, class: "menu-text" %>
       <% if user_signed_in? %>
-        <li><%= link_to '単語帳', word_books_path %></li>
-        <li><%= link_to '単語帳の新規作成', new_word_book_path %></li>
-        <li><a href="#">テスト</a></li>
+        <li><%= link_to t('.word_books'), word_books_path %></li>
+        <li><%= link_to t('.word_book_new'), new_word_book_path %></li>
       <% end %>
     </ul>
   </div>
@@ -14,41 +13,36 @@
     <ul class="vertical menu hide-for-medium" data-accordion-menu>
       <li>
         <a href="#" class="accordion-heder">
-          <span class="menu-text">Tango Note</span>
+          <%= tag.span Settings.web.name, class: "menu-text" %>
           <span class="header-small-accordion"><i class="fas fa-bars text-right"></i></span>
         </a>
         <ul class="menu vertical nested align-center">
           <% if user_signed_in? %>
-            <li><%= link_to '単語帳', new_word_book_path %></li>
-            <li><a href="#">単語帳作成</a></li>
-            <li><a href="#">テスト</a></li>
-            <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
-            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to t('.work_books'), new_word_book_path %></li>
+            <li><%= link_to t('.word_book_new'), new_word_book_path %></li>
+            <li><%= link_to t('.users_edit'), edit_user_registration_path %></li>
+            <li><%= link_to t('.logout'), destroy_user_session_path, method: :delete %></li>
           <% else %>
-            <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-            <li><%= link_to 'ログイン', new_user_session_path %></li>
+            <li><%= link_to t('.login'), new_user_session_path %></li>
+            <li><%= link_to t('.register'), new_user_registration_path %></li>
           <% end %>
         </ul>
       </li>
     </ul>
 
     <ul class="dropdown menu show-for-medium" data-dropdown-menu data-disable-hover="true" data-click-open="true">
-      <li>
-        <a href="#">ユーザー設定</a>
-        <ul class="menu vertical">
-          <% if user_signed_in? %>
-            <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
-            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-            <li><%= link_to 'ログイン', new_user_session_path %></li>
-          <% end %>
-        </ul>
-      </li>
+      <% if user_signed_in? %>
+          <li>
+            <%= link_to t('.users_configuration'), "#" %>
+            <ul class="menu vertical">
+                <li><%= link_to t('.users_edit'), edit_user_registration_path %></li>
+                <li><%= link_to t('.logout'), destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+      <% else %>
+        <li><%= link_to t('.login'), new_user_session_path, class: 'button alert rounded bordered hollow' %></li>
+        <li><%= link_to t('.register'), new_user_registration_path, class: 'button alert rounded bordered' %></li>
+      <% end %>
     </ul>
   </div>
 </div>
-
-
-
-

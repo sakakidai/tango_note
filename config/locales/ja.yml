@@ -1,4 +1,14 @@
 ja:
+  layouts:
+    application:
+    header:
+      word_books: 単語帳
+      word_book_new: 単語帳の作成
+      users_edit: プロフィール変更
+      logout: ログアウト
+      login: ログイン
+      register: 新規登録
+      users_configuration: プロフィール設定
   activerecord:
     errors:
       messages:
