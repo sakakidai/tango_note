@@ -1,11 +1,13 @@
 .field_with_errors {
   label {
-    color: red;
+    color: $alert-color;
   }
   input {
-    border-bottom: solid 2px red !important;
-    background-color: #f7e4e1;
+    border: solid 1px $alert-color;
     margin: 0;
+    &:focus {
+      border: solid 1px $alert-color;
+    }
   }
   input.under-bar-form {
     border-bottom: solid 1px red !important;

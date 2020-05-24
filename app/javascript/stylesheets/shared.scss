@@ -12,6 +12,11 @@
     padding-left: 0;
     padding-right: 0;
   }
+  .is-dropdown-submenu-parent {
+    &:hover {
+      color: $alert-color !important;
+    }
+  }
   a {
     font-weight: bold;
     &:hover {
