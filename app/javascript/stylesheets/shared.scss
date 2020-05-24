@@ -19,3 +19,16 @@
     }
   }
 }
+
+.card-section {
+  .button {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  .text-center {
+    font-weight: bold;
+    color: $gray;
+  }
+}
