@@ -5,4 +5,8 @@ module ApplicationHelper
     when 'notice'; 'success'
     end
   end
+
+  def javascript_path
+    "#{controller_path}.js"
+  end
 end

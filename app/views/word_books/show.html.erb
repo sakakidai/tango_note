@@ -1,12 +1,18 @@
-<p>
-  <strong>Title:</strong>
-  <%= @word_book.title %>
-</p>
+<%= tag.h4 @word_book.title %>
 
-<p>
-  <strong>User:</strong>
-  <%= @word_book.user_id %>
-</p>
+<div class="grid-x grid-margin-x">
+  <% @word_book.words.each do |word| %>
+    <%= tag.div class: "cell medium-6 small-12 card" do %>
+      <%= tag.h4 class: 'word-name' do %>
+        <%= tag.span word.name, id: "word_name_#{word.id}" %>
+        <%= tag.span class: 'button alert', onclick: "speak('#{word.name}')" do %>
+          <i class="fas fa-volume-up"></i>
+        <% end %>
+      <% end %>
+      <%= tag.h4 word.translation %>
+    <% end %>
+  <% end %>
+</div>
 
 <%= link_to 'Edit', edit_word_book_path(@word_book) %> |
 <%= link_to 'Back', word_books_path %>
