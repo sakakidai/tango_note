@@ -18,4 +18,20 @@ ja:
       label:
         name: 単語
         translation: 意味
+    new:
+      title: 新しい単語帳作成
+    create:
+      success: 単語帳を作成しました
+      failed: エラーがあります
+    update:
+      success: 単語帳を編集しました
+      failed: エラーがあります
+    index:
+      title: 自分の単語帳
+      add_words: 単語を追加する
+    show:
+      button:
+        back: 戻る
+        edit: 編集する
+
 

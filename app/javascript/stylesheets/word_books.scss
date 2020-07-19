@@ -18,3 +18,20 @@ input.under-bar-form {
   color: $alert-color;
 }
 
+
+.speak_button {
+  float: right;
+}
+
+.word_book_cards {
+  .word_book_card {
+    &:hover {
+      border-color: $alert-color;
+    }
+  }
+  a {
+    text-decoration: none !important;
+  }
+}
+
+

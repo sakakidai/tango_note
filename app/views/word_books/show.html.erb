@@ -3,16 +3,26 @@
 <div class="grid-x grid-margin-x">
   <% @word_book.words.each do |word| %>
     <%= tag.div class: "cell medium-6 small-12 card" do %>
-      <%= tag.h4 class: 'word-name' do %>
-        <%= tag.span word.name, id: "word_name_#{word.id}" %>
-        <%= tag.span class: 'button alert', onclick: "speak('#{word.name}')" do %>
-          <i class="fas fa-volume-up"></i>
+      <div class="card-section">
+        <%= tag.h4 class: 'word-name' do %>
+          <%= tag.span word.name, id: "word_name_#{word.id}" %>
+          <%= tag.span class: 'button alert speak_button', onclick: "speak('#{word.name}')" do %>
+            <i class="fas fa-volume-up"></i>
+          <% end %>
         <% end %>
-      <% end %>
-      <%= tag.h4 word.translation %>
+        <%= tag.h4 word.translation %>
+      </div>
     <% end %>
   <% end %>
 </div>
 
-<%= link_to 'Edit', edit_word_book_path(@word_book) %> |
-<%= link_to 'Back', word_books_path %>
+<div class="actions">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-6 small-12 medium-offset-3">
+      <%= link_to t('.button.edit'), edit_word_book_path(@word_book), class: "button primary expanded" %>
+    </div>
+    <div class="cell medium-6 small-12 medium-offset-3">
+      <%= link_to t('.button.back'), word_books_path, class: "button secondary expanded" %>
+    </div>
+  </div>
+</div>

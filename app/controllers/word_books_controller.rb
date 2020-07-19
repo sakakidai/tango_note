@@ -28,9 +28,9 @@ class WordBooksController < ApplicationController
   def create
     @word_book = current_user.word_books.build(word_book_params)
     if @word_book.save
-      redirect_to @word_book, notice: 'Word book was successfully created.'
+      redirect_to @word_book, notice: t('.success')
     else
-      flash.now[:alert] = 'エラーがあります'
+      flash.now[:alert] = t('.failed')
       render :new
     end
   end
@@ -38,14 +38,11 @@ class WordBooksController < ApplicationController
   # PATCH/PUT /word_books/1
   # PATCH/PUT /word_books/1.json
   def update
-    respond_to do |format|
-      if @word_book.update(word_book_params)
-        format.html { redirect_to @word_book, notice: 'Word book was successfully updated.' }
-        format.json { render :show, status: :ok, location: @word_book }
-      else
-        format.html { render :edit }
-        format.json { render json: @word_book.errors, status: :unprocessable_entity }
-      end
+    if @word_book.update(word_book_params)
+      redirect_to @word_book, notice: t('.success')
+    else
+      flash.now[:alert] = t('.failed')
+      render :edit
     end
   end
 
@@ -67,6 +64,6 @@ class WordBooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def word_book_params
-      params.require(:word_book).permit(:title, :user_id, words_attributes: [:id, :name, :translation, :_destroy])
+      params.require(:word_book).permit(:title, :user_id, {words_attributes: [:id, :name, :translation, :_destroy]})
     end
 end

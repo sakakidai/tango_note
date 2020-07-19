@@ -13,7 +13,7 @@ $(document).on('turbolinks:load', function() {
     if(voice){
       wordinfo.voice = voice
       wordinfo.volume = 1.0
-      wordinfo.rate = 0.8
+      wordinfo.rate = 1.0
       wordinfo.lang = "en-US"
       wordinfo.pitch = 1.0
     }

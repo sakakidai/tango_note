@@ -10,12 +10,12 @@
     }
   }
   input.under-bar-form {
-    border-bottom: solid 1px red !important;
+    border-bottom: solid 1px $alert-color !important;
     background-color: white;
     margin: 0;
   }
 }
 
 .has-error {
-  color: red;
+  color: $alert-color;
 }
